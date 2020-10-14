@@ -3,7 +3,7 @@ import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
 
 // components
 import { AuthGuard } from './core/guard/auth.guard';
-import { HeaderComponent} from './layout/component/header/header.component'
+import { ContentLayoutComponent} from './layout/content-layout/content-layout.component'
 const routes: Routes = [
   {
     path: '',
@@ -12,7 +12,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    component: HeaderComponent,
+    component: ContentLayoutComponent,
     children: [
       {
         path: 'home',
@@ -27,7 +27,7 @@ const routes: Routes = [
     loadChildren: () =>
       import('./modules/auth/auth.module').then(m => m.AuthModule)
   },
-  { path: '**', redirectTo: '/auth/signin' }
+  { path: '**', redirectTo: '/home' }
 ];
 
 @NgModule({
