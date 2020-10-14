@@ -1,0 +1,76 @@
+$md-drppicker-black: rgba(0, 0, 0, 0.87);
+
+.md-drppicker {
+  background-color: white;
+  color: $md-drppicker-black;
+  box-shadow: 0 2px 5px 0 rgba(164, 173, 186, 0.25);
+  margin: 0px !important;
+
+  .inline & {
+    box-shadow: none !important;
+    padding: 0px !important;
+    border-radius: 0px;
+    border-top: 1px solid #eef0f2;
+    border-bottom: 1px solid #eef0f2;
+  }
+}
+
+.md-drppicker td.available:hover,
+.md-drppicker th.available:hover {
+  background-color: rgba(0, 0, 0, 0.04);
+  color: $md-drppicker-black;
+}
+
+.md-drppicker td.off,
+.md-drppicker td.off.in-range,
+.md-drppicker td.off.start-date,
+.md-drppicker td.off.end-date {
+  background-color: white;
+  border-color: white;
+  color: $md-drppicker-black;
+}
+
+.md-drppicker td.off,
+.md-drppicker td.off.in-range,
+.md-drppicker td.off.start-date,
+.md-drppicker td.off.end-date {
+  background-color: white;
+  border-color: white;
+  color: rgba(0, 0, 0, 0.38);
+}
+
+.md-drppicker td.in-range {
+  background-color: #eeeeee;
+  border-color: #eeeeee;
+  color: $md-drppicker-black;
+}
+
+.md-drppicker td.active {
+  transition: background 300ms ease-out, border 300ms ease-out;
+}
+
+.md-drppicker td.active,
+.md-drppicker td.active:hover {
+  background-color: $salone-green;
+  color: white;
+}
+
+.md-drppicker .ranges ul li button {
+  border-radius: 4px;
+  color: $md-drppicker-black;
+}
+
+.md-drppicker .ranges ul li button.active {
+  background-color: $salone-green;
+  color: white;
+}
+
+.md-drppicker .ranges ul li:hover {
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, 0.04);
+  color: white;
+}
+
+.md-drppicker .calendar-icon::after {
+  border-color: $md-drppicker-black;
+}

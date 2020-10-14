@@ -1,0 +1,160 @@
+$table-secondary-color: #fcfcfc;
+
+// tables
+.table-wrapper {
+  box-shadow: 0 0 0 1px rgba(63, 63, 68, 0.05), 0 1px 3px 0 rgba(63, 63, 68, 0.15);
+
+  .scroll-x {
+    overflow: auto;
+    position: relative;
+    &::-webkit-scrollbar {
+      width: 5px;
+      height: 5px;
+    }
+    &::-webkit-scrollbar-track {
+      box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+      -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: darkgrey;
+      outline: 1px solid slategrey;
+    }
+  }
+
+  table {
+    width: 100%;
+    border-top: 1px solid #f4f4f4;
+    thead {
+      background: $table-secondary-color !important;
+      th {
+        white-space: pre;
+      }
+    }
+  }
+
+  .no-data {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+    text-align: center;
+    font-size: 0.9rem;
+  }
+
+  // mat row
+  .mat-row {
+    &:hover {
+      background: $table-secondary-color;
+      cursor: pointer;
+    }
+  }
+
+  // reset
+  .mat-cell,
+  .mat-footer-cell {
+    font-size: 12px;
+    padding: 10px 5px;
+    line-height: 1.6;
+  }
+
+  tr.mat-footer-row,
+  tr.mat-row {
+    height: 40px;
+  }
+
+  tr.mat-header-row {
+    height: 46px;
+  }
+
+  .mat-paginator {
+    font-size: 11px;
+  }
+
+  .mat-paginator-page-size-label {
+    display: none;
+  }
+
+  .mat-paginator-range-label {
+    display: none;
+    @media (min-width: 576px) {
+      & {
+        display: block;
+      }
+    }
+  }
+}
+
+// mobile cards
+@media screen and (max-width: 768px) {
+  .table-wrapper.mobile-cards {
+    box-shadow: none;
+
+    .mat-table {
+      border: 0;
+      vertical-align: middle;
+    }
+
+    .mat-table caption {
+      font-size: 1em;
+    }
+
+    // header & bottom
+    .table-header, .mat-paginator-outer-container {
+      background: $table-secondary-color;
+    }
+
+    // no data
+    .no-data{
+      background: #fff;
+    }
+
+    // header cell 0
+    table thead {
+      display: none;
+    }
+
+    // row
+    .mat-table .mat-row {
+      margin-bottom: 30px;
+      box-shadow: 0 0 0 1px rgba(63, 63, 68, 0.05), 0 1px 3px 0 rgba(63, 63, 68, 0.15);
+      display: block;
+      height: auto !important;
+      margin-left: 2px;
+      margin-right: 2px;
+
+      &:last-child {
+        margin-bottom: 0px;
+      }
+    }
+
+    // cell
+    .mat-table .mat-cell {
+      display: block;
+      font-size: 0.85rem;
+      text-align: right;
+      font-weight: bold;
+      min-height: 40px;
+      border-bottom-color: lighten($border-color, 5%);
+      color: $text-secondary;
+    }
+
+    .mat-table .mat-cell:before {
+      content: attr(aria-label);
+      float: left;
+      text-transform: uppercase;
+      font-weight: normal;
+      font-size: 0.9rem;
+      color: #333;
+      display: inline-flex;
+    }
+
+    .mat-table .mat-cell:last-child {
+      border-bottom: 0;
+    }
+
+    td.mat-cell {
+      height: auto !important;
+      padding: 10px 15px !important;
+      &:last-of-type {
+        padding-right: 15px !important;
+      }
+    }
+  }
+}

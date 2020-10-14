@@ -1,0 +1,23 @@
+@import "./assets/styles/utilities/variables";
+
+@import "./assets/styles/themes/_light-theme";
+
+@import "./assets/styles/base/_reset";
+@import "./assets/styles/base/_fonts";
+@import "./assets/styles/base/_grids";
+@import "./assets/styles/base/_spacing";
+@import "./assets/styles/base/_flex";
+@import "./assets/styles/base/_display";
+@import "./assets/styles/base/_shadow";
+@import "./assets/styles/base/_typography";
+
+@import "./assets/styles/components/_components";
+@import "./assets/styles/components/_forms";
+@import "./assets/styles/components/_icons";
+@import "./assets/styles/components/_tables";
+@import "./assets/styles/components/_table-bottom-sheet";
+
+@import "./assets/styles/vendors/extended-select";
+@import "./assets/styles/vendors/ngx-daterangepicker";
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

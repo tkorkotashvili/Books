@@ -1,0 +1,137 @@
+// Import material theming functions
+@import "~@angular/material/theming";
+
+// base Colors
+$text-color: #333;
+$text-secondary: #67768c;
+$success-color: #4caf50;
+$fresh-primary: #b4dff2;
+
+// salone colors
+$salone-green: #87bd79;
+$salone-midnight-blue: #202633;
+$salone-blue: #425d8c;
+$salone-light-blue: #6a82ad;
+$salone-red: #E33829;
+$salone-red-lighten: #E85548;
+$salone-yellow: #fdbe4a;
+$salone-yellow-light: #e6c003;
+$salone-yellow-light-v: #f4dc7c;
+$salone-dark-gray: #78839c;
+$salone-gray: #C5CFD6;
+$salone-light-gray: #c5cfd6;
+$salone-white: #f2f6fa;
+
+$primary: $salone-green;
+$accent: $salone-blue;
+
+// salone theme
+$salone-primary-palette: (
+  50: #F1F7EF,
+  100: #DBEBD7,
+  200: #C3DEBC,
+  300: #ABD1A1,
+  400: #99C78D,
+  500: #87BD79,
+  600: #7FB771,
+  700: #74AE66,
+  800: #6AA65C,
+  900: #579849,
+  A100: #F6FFF4,
+  A200: #CBFFC1,
+  A400: #A1FF8E,
+  A700: #8CFF74,
+  contrast: (
+    50: white,
+    100: white,
+    200: white,
+    300: white,
+    400: white,
+    500: white,
+    600: white,
+    700: white,
+    800: white,
+    900: white,
+    A100: white,
+    A200: white,
+    A400: white,
+    A700: white,
+  )
+);
+
+$salone-accent-palette: (
+  50: #E8ECF1,
+  100: #C6CEDD,
+  200: #A1AEC6,
+  300: #7B8EAF,
+  400: #5E759D,
+  500: #425D8C,
+  600: #3C5584,
+  700: #334B79,
+  800: #2B416F,
+  900: #1D305C,
+  A100: #9BB6FF,
+  A200: #6891FF,
+  A400: #356CFF,
+  A700: #1C5AFF,
+  contrast: (
+    50: white,
+    100: white,
+    200: white,
+    300: white,
+    400: white,
+    500: white,
+    600: white,
+    700: white,
+    800: white,
+    900: white,
+    A100: white,
+    A200: white,
+    A400: white,
+    A700: white,
+  )
+);
+
+$salone-warn-palette: (
+  50: #FCE7E5,
+  100: #F7C3BF,
+  200: #F19C94,
+  300: #EB7469,
+  400: #E75649,
+  500: #E33829,
+  600: #E03224,
+  700: #DC2B1F,
+  800: #D82419,
+  900: #D0170F,
+  A100: #FFFDFD,
+  A200: #FFCCCA,
+  A400: #FF9A97,
+  A700: #FF827E,
+  contrast: (
+    50: white,
+    100: white,
+    200: white,
+    300: white,
+    400: white,
+    500: white,
+    600: white,
+    700: white,
+    800: white,
+    900: white,
+    A100: white,
+    A200: white,
+    A400: white,
+    A700: white,
+  )
+);
+
+$theme-primary: mat-palette($salone-primary-palette);
+$theme-accent: mat-palette($salone-accent-palette);
+$theme-warn: mat-palette($salone-warn-palette);
+
+$primary-color: mat-color($theme-primary);
+$accent-color: mat-color($theme-accent);
+$warn-color: mat-color($theme-warn);
+
+// Fonts
+$font-primary: "BPG DejaVu Sans";
