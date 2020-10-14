@@ -3,7 +3,7 @@ import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
 
 // components
 import { AuthGuard } from './core/guard/auth.guard';
-
+import { HeaderComponent} from './layout/component/header/header.component'
 const routes: Routes = [
   {
     path: '',
@@ -12,6 +12,7 @@ const routes: Routes = [
   },
   {
     path: '',
+    component: HeaderComponent,
     children: [
       {
         path: 'home',
