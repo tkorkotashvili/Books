@@ -1,7 +1,27 @@
+<mat-drawer-container class="h-100">
+    <mat-drawer #snav [mode]="mobileQuery.matches ? 'over' : 'side'" [opened]="!mobileQuery.matches"
+        [ngClass]="{'sidenav-collapsed': collapsedNav && !mobileQuery.matches}">
+        <div class="sidenav-header row justify-content-center align-items-center ">
+            <span>{{collapsedNav && !mobileQuery.matches ? 'B' : 'BooksApp'}}</span>
+        </div>
+        <ul class="p-0">
+            <li class="row justify-content-center align-items-center m-3 p-3">
+                <i class="fal fa-home"></i>
+            </li>
+            <li class="row justify-content-center align-items-center m-3 p-3">
+                <i class="fal fa-home"></i>
+            </li>
 
-
-<app-content-header></app-content-header>
-<main class="container-fluid">
-    <router-outlet></router-outlet>
-</main>
-<app-content-footer></app-content-footer>
+        </ul>
+    </mat-drawer>
+    <mat-drawer-content [ngClass]="{'sidenav-collapsed': collapsedNav && !mobileQuery.matches}">
+        <mat-toolbar color="secondary" class="flex-row-reverse flex-md-row">
+            <!-- <button mat-icon-button (click)="snav.toggle()"> -->
+            <button mat-icon-button (click)="mobileQuery.matches ? snav.toggle() : collapsedNav = !collapsedNav">
+                <i class="fal fa-bars"></i>
+            </button>
+        </mat-toolbar>
+        <router-outlet></router-outlet>
+        <app-content-footer></app-content-footer>
+    </mat-drawer-content>
+</mat-drawer-container>

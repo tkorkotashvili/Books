@@ -52,7 +52,8 @@ a {
 }
 
 // content-scroll
-.content-scroll, .mat-drawer-inner-container {
+.content-scroll,
+.mat-drawer-inner-container {
   &.scroll-y {
     overflow-y: auto !important;
   }
@@ -67,7 +68,7 @@ a {
     box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.3);
   }
   &::-webkit-scrollbar-thumb {
-    background-color: lighten($salone-green, 10%);
+    background-color: lighten($books-green, 10%);
   }
 }
 
@@ -164,10 +165,10 @@ a {
 .table-status-indicator {
   font-size: 1.1rem;
   &.fa-check {
-    color: $salone-green;
+    color: $books-green;
   }
   &.fa-times {
-    color: $salone-red;
+    color: $books-red;
   }
 }
 
@@ -186,8 +187,8 @@ a {
 // chips
 .filter-chip {
   i {
-      color: lighten($salone-red, 15%);
-      font-size: 1.1rem;
-      cursor: pointer;
+    color: lighten($books-red, 15%);
+    font-size: 1.1rem;
+    cursor: pointer;
   }
 }
