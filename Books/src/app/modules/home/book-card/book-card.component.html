@@ -8,8 +8,11 @@
         mat-card-sm-image
         src={{book.imageLinks.smallThumbnail}}
       />
-      <mat-card-title class="mr-2">{{book?.title}}</mat-card-title>
-      <mat-card-subtitle>{{book?.subtitle}}</mat-card-subtitle>
+      <mat-card-title class="mr-2">{{book?.title.substring(0,25)+"..."}}</mat-card-title>
+      <mat-card-subtitle> 
+        <p>{{book?.subtitle}}
+        </p>
+      </mat-card-subtitle>
     </mat-card-title-group>
     <mat-card-content class="mt-3">
       <span>Written by:</span>
