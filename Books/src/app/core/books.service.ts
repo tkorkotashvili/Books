@@ -11,6 +11,6 @@ export class BooksService {
   constructor(private http: HttpClient) { }
   apiPath = this.env.apiUrl;
   getNgBooks() {
-    return this.http.get<any>(`${this.apiPath}?q=ng`);
+    return this.http.get<any>(`${this.apiPath}?q=Angular`);
   }
 }
