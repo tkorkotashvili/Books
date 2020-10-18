@@ -1,46 +1,57 @@
 @import "src/assets/styles/utilities/_variables";
+
 // mat-drawer-container {
 //     height: 100%;
 // }
 mat-drawer,
 mat-drawer-content {
-    transition-duration: 0.4s;
-    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 0.4s;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+mat-toolbar {
+  position: fixed;
+  z-index: 999;
 }
 
 mat-drawer {
-    position: absolute;
-    width: 250px;
-    overflow-x: hidden !important;
-    background-color: $books-midnight-blue;
+  position: absolute;
+  width: 250px;
+  overflow-x: hidden !important;
+  background-color: $books-midnight-blue;
+  transition-property: width;
+
+  &.sidenav-collapsed {
+    width: 100px;
+  }
+
+  .sidenav-header {
+    width: 100%;
+    background-color: #000000;
     transition-property: width;
-    &.sidenav-collapsed {
-        width: 100px;
+    height: 64px;
+
+    span {
+      font-size: 2em;
+      color: #ffffff;
     }
-    .sidenav-header {
-        width: 100%;
-        background-color: #000000;
-        transition-property: width;
-        height: 64px;
-        span {
-            font-size: 2em;
-            color: #ffffff;
-        }
+  }
+
+  ul {
+    li {
+      color: #ffffff;
+      list-style: none;
+      cursor: pointer;
+      background-color: #000000;
+      border-radius: 5px;
     }
-    ul {
-        li {
-            color: #ffffff;
-            list-style: none;
-            cursor: pointer;
-            background-color: #000000;
-            border-radius: 5px;
-        }
-    }
+  }
 }
 
 mat-drawer-content {
-    transition-property: transform, margin-left, margin-right;
-    &.sidenav-collapsed {
-        margin-left: 100px !important;
-    }
+  transition-property: transform, margin-left, margin-right;
+
+  &.sidenav-collapsed {
+    margin-left: 100px !important;
+  }
 }

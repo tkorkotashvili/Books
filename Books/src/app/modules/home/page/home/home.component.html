@@ -1,1 +1,17 @@
-<p>home works!</p>
+<!-- <div
+  class="d-flex justify-content-center"
+  style="height: 70px; background-color: lightgray"
+>
+  <h1 class="mt-2">Home</h1>
+</div> -->
+<app-header-spacing></app-header-spacing>
+<mat-toolbar color="primary" class="justify-content-center">Home</mat-toolbar>
+<div class="d-flex justify-content-center">
+  <div class="container row justify-content-around">
+    <ng-container *ngFor="let book of books">
+      <div class="col-12 col-sm-6 col-lg-4">
+        <app-book-card></app-book-card>
+      </div>
+    </ng-container>
+  </div>
+</div>

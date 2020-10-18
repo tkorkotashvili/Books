@@ -1,0 +1,28 @@
+<a class="d-flex" [routerLink]="['#']">
+  <mat-card
+    class="d-flex flex-column justify-content-between mt-md-3 z-depth-1"
+  >
+    <mat-card-title-group class="m-0">
+      <img
+        class="ml-1"
+        mat-card-sm-image
+        src="https://books.google.com/books/content?id=HHCm2R9p91MC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api"
+      />
+      <mat-card-title class="mr-2">title</mat-card-title>
+      <mat-card-subtitle>mat-card-subtitle</mat-card-subtitle>
+    </mat-card-title-group>
+    <mat-card-content class="mt-3">
+      <span>Written by:</span>
+    </mat-card-content>
+    <p>book authors</p>
+    <mat-card-actions>
+      <button mat-raised-button color="primary">
+        <i class="fal fa-star"></i> <span class="ml-1">Favorite</span>
+      </button>
+      <button mat-raised-button color="secondary">
+        <i class="fal fa-info"></i> <span class="ml-1">Details</span>
+      </button>
+    </mat-card-actions>
+  </mat-card>
+  <mat-card-footer> </mat-card-footer>
+</a>
